@@ -22,7 +22,7 @@ def analyze_sentiment(request: List[SentimentRequest]):
         if res['label'] == 'negative':
             score *= -1
         sentimentResponse.append(SentimentResponse(
-            articleTitle=req.articleTitle,
+            finnhub_news_id=req.finnhub_news_id,
             score=score
         ))
     

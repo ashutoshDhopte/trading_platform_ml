@@ -1,9 +1,10 @@
 from pydantic import BaseModel
 
 class SentimentRequest(BaseModel):
+    finnhub_news_id: str
     articleTitle: str
     articleSummary: str
 
 class SentimentResponse(BaseModel):
-    articleTitle: str
+    finnhub_news_id: str
     score: float
